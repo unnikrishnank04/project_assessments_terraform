@@ -22,5 +22,5 @@ output "serverloginkey" {
   value = aws_instance.jenkins.key_name
 }
 output "jenkins_endpoint" {
-  value = "http://${aws_instance.jenkins.public_ip}"
+  value = "http://${aws_instance.jenkins.public_ip}:8080/"
 }
