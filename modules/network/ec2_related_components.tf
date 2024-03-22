@@ -83,7 +83,7 @@ resource "aws_instance" "jenkins" {
   vpc_security_group_ids      = [aws_security_group.jenkins.id]
   subnet_id                   = aws_subnet.public[0].id
   associate_public_ip_address = true
-  user_data                   = file("init_script.sh")
+#  user_data                   = file("init_script.sh")
   availability_zone           = data.aws_availability_zones.available.names[0]
   depends_on                  = [aws_security_group.jenkins]
   tags                        = merge(var.tagging, { Name = "JENKINS-CICD" })
