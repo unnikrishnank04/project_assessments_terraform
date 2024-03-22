@@ -99,5 +99,5 @@ provisioner "remote-exec"{
 }
 }
 provisioner "local-exec"{
-  command = "ansible-playbook -i ${aws_instance.jenkins.public_ip}, --private-key ${local.private_key_path} ./jenkins_install.yml"
+  command = "ansible-playbook -i ${aws_instance.jenkins.public_ip}, --private-key ${local.private_key_path} ./jenkins_install_EC2.yml"
 }
