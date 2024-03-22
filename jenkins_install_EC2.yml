@@ -1,7 +1,0 @@
----
-- name: Install Jenkins on AWS EC2 Machine via Roles
-  hosts: all
-  become: yes
-  become_user: ec2-user
-  roles:
-  - jenkins_install
